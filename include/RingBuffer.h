@@ -170,4 +170,72 @@ public:
     }
 };
 
+// Основной шаблон для тривиально копируемых типов
+template <typename T, size_t Capacity, bool UseMemcpy>
+class RingBuffer
+    : public RingBufferCore<T, Capacity>
+{
+public:
+    using Base = RingBufferCore<T, Capacity>;
+    using Base::Base;
+};
+
+// Частичная специализация для тривиально копируемых типов
+template <typename T, size_t Capacity>
+class RingBuffer<T, Capacity, true>
+    : public RingBufferCore<T, Capacity>
+{
+public:
+    using Base = RingBufferCore<T, Capacity>;
+    using Base::Base;
+
+    // Оптимизированное получение элементов через memcpy
+    array<T, Capacity> getOrderedData() const
+    {
+        array<T, Capacity> result{};
+
+        size_t currentCount = this->count;
+
+        if (currentCount == 0)
+        {
+            return result;
+        }
+
+        // Количество элементов до конца массива
+        size_t firstPart = min(
+            currentCount,
+            Capacity - this->head);
+
+        // Количество элементов в начале массива
+        size_t secondPart = currentCount - firstPart;
+
+        // Копирование первой части
+        memcpy(
+            result.data(),
+            this->data + this->head,
+            firstPart * sizeof(T));
+
+        // Копирование второй части
+        if (secondPart > 0)
+        {
+            memcpy(
+                result.data() + firstPart,
+                this->data,
+                secondPart * sizeof(T));
+        }
+
+        return result;
+    }
+};
+
+// Частичная специализация для нетривиально копируемых типов
+template <typename T, size_t Capacity>
+class RingBuffer<T, Capacity, false>
+    : public RingBufferCore<T, Capacity>
+{
+public:
+    using Base = RingBufferCore<T, Capacity>;
+    using Base::Base;
+};
+
 #endif
