@@ -95,6 +95,79 @@ public:
         head = (head + 1) % Capacity;
         count--;
     }
+
+    // Получение первого элемента
+    T &front()
+    {
+        if (count == 0)
+        {
+            throw out_of_range("Buffer is empty");
+        }
+
+        return data[head];
+    }
+
+    const T &front() const
+    {
+        if (count == 0)
+        {
+            throw out_of_range("Buffer is empty");
+        }
+
+        return data[head];
+    }
+
+    // Получение последнего элемента
+    T &back()
+    {
+        if (count == 0)
+        {
+            throw out_of_range("Buffer is empty");
+        }
+
+        return data[(head + count - 1) % Capacity];
+    }
+
+    const T &back() const
+    {
+        if (count == 0)
+        {
+            throw out_of_range("Buffer is empty");
+        }
+
+        return data[(head + count - 1) % Capacity];
+    }
+
+    // Количество элементов
+    size_t size() const
+    {
+        return count;
+    }
+
+    // Проверка пустоты
+    bool empty() const
+    {
+        return count == 0;
+    }
+
+    // Получение максимальной зафиксированной ёмкости
+    static size_t getMaxCapacity()
+    {
+        return maxCapacity;
+    }
+
+    // Получение элементов в обычном порядке
+    array<T, Capacity> getOrderedData() const
+    {
+        array<T, Capacity> result{};
+
+        for (size_t i = 0; i < count; i++)
+        {
+            result[i] = data[(head + i) % Capacity];
+        }
+
+        return result;
+    }
 };
 
 #endif
