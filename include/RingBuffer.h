@@ -238,4 +238,32 @@ public:
     using Base::Base;
 };
 
+// Дружественная шаблонная функция
+// Вычисление среднего арифметического
+template <typename T, size_t Capacity, bool UseMemcpy>
+double calculateAverage(
+    const RingBuffer<T, Capacity, UseMemcpy> &buffer)
+{
+    static_assert(
+        is_arithmetic<T>::value,
+        "Average calculation requires an arithmetic type");
+
+    const RingBufferCore<T, Capacity> &base = buffer;
+
+    if (base.count == 0)
+    {
+        throw out_of_range("Buffer is empty");
+    }
+
+    double sum = 0;
+
+    for (size_t i = 0; i < base.count; i++)
+    {
+        sum += static_cast<double>(
+            base.data[(base.head + i) % Capacity]);
+    }
+
+    return sum / base.count;
+}
+
 #endif
