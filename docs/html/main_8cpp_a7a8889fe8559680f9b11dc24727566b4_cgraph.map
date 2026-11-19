@@ -1,0 +1,15 @@
+<map id="showCapacity" name="showCapacity">
+<area shape="rect" id="Node000001" title="Запрашивает номер буфера и выводит его вместимость." alt="" coords="5,67,110,92"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="28,67,23,58,26,48,38,42,58,40,78,43,90,51,85,52,76,48,57,45,40,47,30,52,28,57,34,66"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#afd3a0741a37ba9bec56ef56dcfd2793d" title="Запрашивает у пользователя номер буфера и проверяет его." alt="" coords="182,29,273,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,66,169,54,165,57,111,71"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a3416188649b6f9a797584dd028d853ad" title="Показывает вместимость и текущую заполненность одного буфера." alt="" coords="158,103,297,128"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="110,88,151,98,146,99,110,93"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="198,28,193,21,196,11,208,5,227,3,248,5,260,14,255,14,246,10,227,8,210,10,200,15,198,20,203,30"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ab73a30d4fbb97df8c422e8d7bdf13a21" title="Подсчитывает общее количество загруженных буферов всех типов." alt="" coords="366,29,468,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,40,352,42,347,43,274,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="385,28,379,21,382,11,395,5,417,3,440,5,453,14,448,14,438,10,417,8,397,10,386,15,384,20,390,30"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="198,101,193,94,196,84,208,78,227,76,248,79,260,88,255,87,246,84,227,81,210,83,200,88,198,93,203,103"/>
+<area shape="rect" id="Node000005" href="$class_ring_buffer_core.html#a500c14f371a854eb3a2a2791aa6e877c" title="Возвращает количество элементов, фактически находящихся в буфере." alt="" coords="345,103,488,128"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="298,113,332,115,327,116,298,118"/>
+</map>

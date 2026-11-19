@@ -1,13 +1,14 @@
+// Реализация самого кольцевого буфера
 #ifndef RINGBUFFER_H
 #define RINGBUFFER_H
 
-#include <iostream>
-#include <array>
-#include <cstring>
-#include <type_traits>
-#include <stdexcept>
-#include <algorithm>
-#include <string>
+#include <iostream> // Ввод и вывод
+#include <array> // Контейнер std::array
+#include <cstring> // Функция memcpy для побайтного копирования данных
+#include <type_traits> // Проверка свойств типов, например is_trivially_copyable
+#include <stdexcept> // Исключения std::out_of_range
+#include <algorithm> // Функция std::min для вычисления минимального значения
+#include <string> // Тип std::string для хранения строковых данных
 
 using namespace std;
 
@@ -25,7 +26,8 @@ inline static size_t maxCapacity = 0;
  * @tparam T Тип элементов, которые будут храниться в буфере.
  * @tparam Capacity Максимальное количество элементов в одном буфере.
  * @tparam UseMemcpy Выбирает реализацию получения упорядоченных данных:
- * true для тривиально копируемых типов, false для остальных типов.
+ * true для типов, которые можно копировать побайтно, false для остальных.
+ * Указывает для string - false. Для остальных - true.
  */
 template <
     typename T,
@@ -35,6 +37,7 @@ class RingBuffer;
 
 /**
  * @brief Предварительное объявление функции вычисления среднего значения.
+ * Для того чтобы далее функция будет объявлена как дружественная к RingBuffer, необходимо предварительное объявление.
  * @tparam T Тип элементов буфера.
  * @tparam Capacity Вместимость буфера.
  * @tparam UseMemcpy Признак выбранной специализации RingBuffer.
@@ -60,15 +63,18 @@ double calculateAverage(
 template <typename T, size_t Capacity>
 class RingBufferCore
 {
+    // Проверка на нулевой размер буфера
     static_assert(
         Capacity > 0,
         "Capacity must be greater than zero");
-
+    
+    // Проверка на поддерживаемый тип элементов
     static_assert(
         is_arithmetic<T>::value ||
             is_same<T, string>::value,
         "Only arithmetic types and string are supported");
 
+    // Проверка на возможность создания и копирования элементов (конструктор по умолчанию и оператор присваивания)
     static_assert(
         is_default_constructible<T>::value &&
             is_copy_assignable<T>::value,
@@ -76,7 +82,7 @@ class RingBufferCore
 
 protected:
     /** @brief Массив фиксированной вместимости для физического хранения элементов. */
-    T data[Capacity]{};
+    T data[Capacity]{}; // нетиповой параметр
 
     /** @brief Индекс первого элемента в физическом массиве. */
     size_t head = 0;
@@ -120,16 +126,16 @@ public:
      *
      * @param value Значение, которое требуется добавить.
      */
-    void push(const T &value)
+    void push(const T &value) // Функция не меняет переданное значение. Передача по ссылке для эффективности. Внутри буфера создается копия.
     {
-        if (count < Capacity)
+        if (count < Capacity) // Проверка на наличие свободного места.
         {
-            size_t index = (head + count) % Capacity;
+            size_t index = (head + count) % Capacity; // Вычисление индекса для нового элемента с учетом циклического расположения.
 
             data[index] = value;
             count++;
         }
-        else
+        else // Если буфер заполнен, удаляем старый элепмент.
         {
             data[head] = value;
 
@@ -174,6 +180,7 @@ public:
      * @brief Возвращает константную ссылку на первый элемент буфера.
      * @return Константная ссылка на самый старый элемент.
      * @throws std::out_of_range Если буфер пуст.
+     * Когда буфер нельзя изменять.
      */
     const T &front() const
     {
@@ -204,6 +211,7 @@ public:
      * @brief Возвращает константную ссылку на последний элемент буфера.
      * @return Константная ссылка на последний элемент.
      * @throws std::out_of_range Если буфер пуст.
+     * Когда буфер нельзя изменять.
      */
     const T &back() const
     {
@@ -237,7 +245,7 @@ public:
      * @brief Возвращает максимальную вместимость среди созданных буферов.
      * @return Наибольшее значение Capacity, зарегистрированное конструкторами.
      */
-    static size_t getMaxCapacity()
+    static size_t getMaxCapacity() // static, так как maxCapacity общий для всех объектов. Функция не зависит от конкретного объекта.
     {
         return maxCapacity;
     }
@@ -248,10 +256,11 @@ public:
      * Результат начинается с самого старого элемента и заканчивается
      * самым новым. Неиспользуемые позиции результирующего массива
      * остаются инициализированными значениями по умолчанию.
-     *
+     * array - контейнер фиксированного размера.
+     * 
      * @return Массив фиксированного размера Capacity с упорядоченными данными.
      */
-    array<T, Capacity> getOrderedData() const
+    array<T, Capacity> getOrderedData() const 
     {
         array<T, Capacity> result{};
 
@@ -269,6 +278,8 @@ public:
  * @tparam T Тип хранимых элементов.
  * @tparam Capacity Максимальное количество элементов.
  * @tparam UseMemcpy Признак выбора оптимизированной реализации.
+ * Частичная специализация шаблона ниже использует memcpy для типов, которые можно копировать побайтно, чтобы быстрее получать упорядоченные данные.
+ * UseMemcpy устанавливается в true для типов, которые можно копировать побайтно, и false для остальных, включая std::string.
  *
  * Наследует базовые операции от RingBufferCore. Для тривиально копируемых
  * типов применяется частичная специализация ниже.
@@ -278,15 +289,16 @@ class RingBuffer
     : public RingBufferCore<T, Capacity>
 {
 public:
-    using Base = RingBufferCore<T, Capacity>;
-    using Base::Base;
+    using Base = RingBufferCore<T, Capacity>; // Псевдоним для базового класса, чтобы упростить доступ к его членам.
+    using Base::Base; // Наслдеование конструкторов базового класса, чтобы RingBuffer мог использовать конструкторы RingBufferCore.
 };
 
 /**
- * @brief Специализация буфера для тривиально копируемых типов.
+ * @brief Специализация буфера для типов, которые можно копировать побайтно.
  * @tparam T Тип элементов, для которого допустимо побайтовое копирование.
  * @tparam Capacity Вместимость буфера.
  *
+ * Если параметр UseMemcpy равен true, используется эта специализация.
  * Переопределяет getOrderedData и использует memcpy для копирования
  * одной или двух непрерывных частей кольцевого массива.
  */
@@ -328,9 +340,9 @@ public:
 
         // Копирование первой части
         memcpy(
-            result.data(),
-            this->data + this->head,
-            firstPart * sizeof(T));
+            result.data(), // Куда копировать
+            this->data + this->head, // Откуда копировать
+            firstPart * sizeof(T)); // Сколько байт копировать
 
         // Копирование второй части
         if (secondPart > 0)
@@ -346,10 +358,11 @@ public:
 };
 
 /**
- * @brief Специализация буфера для нетривиально копируемых типов.
+ * @brief Специализация буфера для типов, которые нельзя копировать побайтно.
  * @tparam T Тип элементов, для которых нельзя применять побайтовое копирование.
  * @tparam Capacity Вместимость буфера.
- *
+ * 
+ * Если параметр UseMemcpy равен false, используется эта специализация.
  * Использует обычную реализацию getOrderedData из RingBufferCore,
  * копирующую элементы по одному с учетом циклического расположения.
  */

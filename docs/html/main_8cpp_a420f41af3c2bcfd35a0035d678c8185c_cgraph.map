@@ -1,0 +1,11 @@
+<map id="showBufferFrontBack" name="showBufferFrontBack">
+<area shape="rect" id="Node000001" title="Показывает первый и последний элементы переданного буфера." alt="" coords="5,55,153,80"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="46,55,40,46,44,36,57,30,79,28,103,31,117,39,111,41,101,36,79,33,58,35,48,40,45,45,51,54"/>
+<area shape="rect" id="Node000002" href="$class_ring_buffer_core.html#a6102f1bf1bb97208dc420cb0523581e0" title="Возвращает ссылку на последний добавленный элемент." alt="" coords="201,5,348,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,52,208,34,203,37,134,57"/>
+<area shape="rect" id="Node000003" href="$class_ring_buffer_core.html#a23645b4732a981dfc72b33cd8b27ec27" title="Возвращает ссылку на первый элемент буфера." alt="" coords="202,55,347,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,65,189,67,183,68,154,70"/>
+<area shape="rect" id="Node000004" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="235,128,314,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,78,226,121,221,124,115,84"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="241,127,235,119,239,110,252,103,274,101,298,104,312,114,307,113,297,109,274,107,254,109,243,113,240,119,246,129"/>
+</map>

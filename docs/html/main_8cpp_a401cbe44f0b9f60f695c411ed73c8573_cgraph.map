@@ -1,0 +1,16 @@
+<map id="removeFromBuffer" name="removeFromBuffer">
+<area shape="rect" id="Node000001" title="Удаляет первый элемент выбранного буфера и показывает результат." alt="" coords="5,43,135,68"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="39,43,33,34,37,24,49,18,70,16,92,19,105,27,100,28,90,24,70,21,51,23,41,28,38,33,44,42"/>
+<area shape="rect" id="Node000002" href="$class_ring_buffer_core.html#ac43fe65e4e8c70ac5295a1e1db652d28" title="Удаляет первый (самый старый) элемент буфера." alt="" coords="183,5,323,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,40,174,33,170,36,136,45"/>
+<area shape="rect" id="Node000003" href="$functions_8h.html#ae4e7e125336d52d7db53e957d3b722e0" title="Выводит все элементы кольцевого буфера в логическом порядке." alt="" coords="212,79,294,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,66,199,80,194,82,135,71"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="222,78,216,70,220,60,232,54,253,52,275,55,288,64,283,63,273,60,253,57,234,59,224,64,221,69,227,79"/>
+<area shape="rect" id="Node000004" href="$class_ring_buffer_core.html#adbcd051a47070620ccfa714acbe36a66" title="Копирует элементы в обычном логическом порядке." alt="" coords="371,5,582,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="281,76,370,40,397,34,392,36,372,45,283,81"/>
+<area shape="rect" id="Node000005" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="438,79,516,104"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="294,89,425,91,419,92,294,94"/>
+<area shape="rect" id="Node000006" href="$class_ring_buffer_core.html#a500c14f371a854eb3a2a2791aa6e877c" title="Возвращает количество элементов, фактически находящихся в буфере." alt="" coords="405,128,548,154"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="294,98,403,124,397,124,293,103"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="439,77,432,70,437,60,452,54,477,52,504,55,519,64,514,64,503,60,477,57,453,59,440,64,437,69,444,79"/>
+</map>

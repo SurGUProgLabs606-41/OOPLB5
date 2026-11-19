@@ -1,0 +1,6 @@
+<map id="loadBuffer" name="loadBuffer">
+<area shape="rect" id="Node000001" title="Считывает значения одной строки файла и создает один буфер." alt="" coords="5,29,86,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="18,29,13,21,16,11,27,5,46,3,65,5,77,14,72,14,63,10,45,8,29,10,20,15,18,20,23,28"/>
+<area shape="rect" id="Node000002" href="$class_ring_buffer_core.html#a8be8c43eb406aab0a07c9f205240830f" title="Добавляет значение в конец буфера." alt="" coords="134,29,281,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="86,40,121,42,116,43,86,45"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="printBuffer" name="printBuffer">
+<area shape="rect" id="Node000001" title="Выводит все элементы кольцевого буфера в логическом порядке." alt="" coords="5,79,87,104"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="13,79,7,70,11,60,24,54,46,52,70,55,83,63,78,65,68,60,46,57,26,59,15,64,12,69,18,77"/>
+<area shape="rect" id="Node000002" href="$class_ring_buffer_core.html#adbcd051a47070620ccfa714acbe36a66" title="Копирует элементы в обычном логическом порядке." alt="" coords="135,5,346,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,76,97,57,134,40,156,34,151,37,136,45,99,62,69,80"/>
+<area shape="rect" id="Node000003" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="201,79,280,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="87,89,187,89,184,94,87,94"/>
+<area shape="rect" id="Node000004" href="$class_ring_buffer_core.html#a500c14f371a854eb3a2a2791aa6e877c" title="Возвращает количество элементов, фактически находящихся в буфере." alt="" coords="169,128,312,154"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="87,101,135,114,166,124,161,124,134,119,87,106"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="207,78,201,70,205,60,219,54,240,52,264,55,278,64,273,64,263,60,240,57,220,59,209,64,207,69,212,79"/>
+</map>

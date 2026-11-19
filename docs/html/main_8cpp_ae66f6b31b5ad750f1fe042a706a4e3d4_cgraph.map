@@ -1,0 +1,84 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Точка входа в программу." alt="" coords="5,352,55,378"/>
+<area shape="poly" id="edge23_Node000001_Node000001" title=" " alt="" coords="7,352,3,343,6,334,15,328,30,325,46,328,55,336,50,338,44,333,30,331,17,333,10,337,9,343,12,351"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a82ceff5e08f30d6e1584a341d8688253" title="Выбирает один из десяти буферов и добавляет в него элемент." alt="" coords="114,205,204,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,351,57,298,76,267,101,240,107,237,104,242,105,244,81,271,62,301,38,352"/>
+<area shape="rect" id="Node000010" href="$main_8cpp.html#ab73a30d4fbb97df8c422e8d7bdf13a21" title="Подсчитывает общее количество загруженных буферов всех типов." alt="" coords="481,131,583,156"/>
+<area shape="poly" id="edge16_Node000001_Node000010" title=" " alt="" coords="29,351,32,314,42,263,64,210,80,186,101,167,129,153,168,143,265,133,372,133,468,138,463,140,372,138,266,139,169,148,131,158,104,171,84,190,69,213,48,264,37,314,34,352"/>
+<area shape="rect" id="Node000011" href="$main_8cpp.html#aa87beb8176d24c12c6fbc494dad6221a" title="Загружает из data.txt все десять объектов кольцевого буфера." alt="" coords="122,80,196,106"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="29,352,33,310,44,250,66,184,81,152,101,123,114,112,112,117,105,127,86,155,71,186,50,252,39,311,35,352"/>
+<area shape="rect" id="Node000013" href="$main_8cpp.html#a9e4323d6525d2662dcf66baf1264eb52" title="Запрашивает номер буфера и удаляет из него самый старый элемент." alt="" coords="103,352,215,378"/>
+<area shape="poly" id="edge24_Node000001_Node000013" title=" " alt="" coords="54,363,89,363,85,367,57,367"/>
+<area shape="rect" id="Node000016" href="$main_8cpp.html#a7affedac6d24adea848c3d4ab3c6f4f8" title="Выводит содержимое всех загруженных буферов." alt="" coords="282,551,391,576"/>
+<area shape="poly" id="edge31_Node000001_Node000016" title=" " alt="" coords="38,375,65,418,83,441,104,461,291,543,287,546,101,466,79,445,61,421,38,381"/>
+<area shape="rect" id="Node000017" href="$main_8cpp.html#a04ec64d6994efa4b1328c898ed719a85" title="Запрашивает номер буфера и выводит среднее арифметическое его элементов." alt="" coords="109,425,209,451"/>
+<area shape="poly" id="edge34_Node000001_Node000017" title=" " alt="" coords="54,376,124,416,119,418,55,381"/>
+<area shape="rect" id="Node000020" href="$main_8cpp.html#a7a8889fe8559680f9b11dc24727566b4" title="Запрашивает номер буфера и выводит его вместимость." alt="" coords="107,279,211,304"/>
+<area shape="poly" id="edge41_Node000001_Node000020" title=" " alt="" coords="46,350,101,313,112,309,109,313,104,318,50,353"/>
+<area shape="rect" id="Node000022" href="$main_8cpp.html#a8c412b96f968ce6fd8535780a0749efc" title="Выбирает буфер по общему номеру и выводит его крайние элементы." alt="" coords="103,551,215,576"/>
+<area shape="poly" id="edge47_Node000001_Node000022" title=" " alt="" coords="36,376,64,435,105,506,134,540,129,541,100,509,59,437,36,381"/>
+<area shape="rect" id="Node000026" href="$main_8cpp.html#aba5bd9067aa6f261123165a337c7957d" title="Выводит список доступных пользователю команд." alt="" coords="117,624,201,650"/>
+<area shape="poly" id="edge55_Node000001_Node000026" title=" " alt="" coords="33,375,42,416,55,470,75,530,105,587,128,614,123,614,100,590,70,532,50,471,37,417,33,381"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="136,205,132,197,135,187,144,181,159,179,175,181,184,189,179,191,173,186,159,184,146,186,139,190,137,196,141,205"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ab992e0913d5750e407186f3376c4c9b8" title="Считывает и добавляет значение в выбранный массив буферов." alt="" coords="291,205,382,231"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="203,216,277,217,273,220,206,221"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html#afd3a0741a37ba9bec56ef56dcfd2793d" title="Запрашивает у пользователя номер буфера и проверяет его." alt="" coords="291,331,382,356"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="194,229,216,240,270,279,314,319,309,320,266,283,214,244,195,234"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="306,205,301,197,304,187,317,181,337,179,358,181,371,190,366,191,357,186,337,184,318,186,308,191,306,196,311,205"/>
+<area shape="rect" id="Node000004" href="$functions_8h.html#ae4e7e125336d52d7db53e957d3b722e0" title="Выводит все элементы кольцевого буфера в логическом порядке." alt="" coords="491,404,573,430"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="352,229,412,293,435,331,445,348,460,367,495,396,490,396,456,371,440,351,431,334,408,296,352,234"/>
+<area shape="rect" id="Node000008" href="$class_ring_buffer_core.html#a8be8c43eb406aab0a07c9f205240830f" title="Добавляет значение в конец буфера." alt="" coords="458,44,606,70"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="346,203,392,151,423,120,457,92,488,75,484,79,460,96,426,124,395,155,351,207"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="499,403,493,395,497,386,510,379,532,377,556,380,570,389,564,389,554,385,532,383,511,385,501,389,498,395,504,404"/>
+<area shape="rect" id="Node000005" href="$class_ring_buffer_core.html#adbcd051a47070620ccfa714acbe36a66" title="Копирует элементы в обычном логическом порядке." alt="" coords="654,404,865,430"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="572,414,641,416,635,417,573,419"/>
+<area shape="rect" id="Node000006" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="720,508,798,534"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="573,426,607,438,669,468,725,500,719,500,667,473,605,443,573,431"/>
+<area shape="rect" id="Node000007" href="$class_ring_buffer_core.html#a500c14f371a854eb3a2a2791aa6e877c" title="Возвращает количество элементов, фактически находящихся в буфере." alt="" coords="688,312,831,338"/>
+<area shape="poly" id="edge10_Node000004_Node000007" title=" " alt="" coords="565,401,714,343,709,345,567,406"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="721,507,714,499,719,490,734,483,759,481,787,484,803,493,797,493,786,489,759,487,735,489,722,493,719,499,726,508"/>
+<area shape="poly" id="edge15_Node000009_Node000009" title=" " alt="" coords="306,330,301,322,304,312,317,306,337,304,358,307,371,315,366,316,357,312,337,309,318,311,308,316,306,321,311,330"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="349,329,506,170,509,166,353,332"/>
+<area shape="poly" id="edge14_Node000010_Node000010" title=" " alt="" coords="499,130,493,122,497,112,510,106,532,104,556,107,570,115,564,116,554,112,532,109,511,111,501,116,498,121,504,130"/>
+<area shape="poly" id="edge18_Node000011_Node000010" title=" " alt="" coords="195,95,411,122,468,132,463,134,410,127,197,100"/>
+<area shape="poly" id="edge22_Node000011_Node000011" title=" " alt="" coords="136,80,132,71,135,62,144,56,159,53,175,56,184,64,179,66,173,61,159,59,146,61,139,65,137,71,141,79"/>
+<area shape="rect" id="Node000012" href="$main_8cpp.html#ab1c8665ec01900f2448e3465603c888c" title="Считывает значения одной строки файла и создает один буфер." alt="" coords="296,29,377,55"/>
+<area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="194,80,283,56,280,60,198,85"/>
+<area shape="poly" id="edge21_Node000012_Node000008" title=" " alt="" coords="376,43,445,49,441,51,379,48"/>
+<area shape="poly" id="edge20_Node000012_Node000012" title=" " alt="" coords="306,29,301,21,304,11,317,5,337,3,358,5,371,13,366,15,357,10,337,8,318,10,308,15,306,20,311,29"/>
+<area shape="poly" id="edge30_Node000013_Node000009" title=" " alt="" coords="214,356,278,349,274,352,217,360"/>
+<area shape="poly" id="edge25_Node000013_Node000013" title=" " alt="" coords="136,352,132,343,135,334,144,328,159,325,175,328,184,336,179,337,173,333,159,331,146,333,139,337,137,343,141,351"/>
+<area shape="rect" id="Node000014" href="$main_8cpp.html#a401cbe44f0b9f60f695c411ed73c8573" title="Удаляет первый элемент выбранного буфера и показывает результат." alt="" coords="272,404,401,430"/>
+<area shape="poly" id="edge26_Node000013_Node000014" title=" " alt="" coords="205,376,278,398,273,400,206,381"/>
+<area shape="poly" id="edge28_Node000014_Node000004" title=" " alt="" coords="401,414,478,416,473,418,402,419"/>
+<area shape="poly" id="edge29_Node000014_Node000014" title=" " alt="" coords="306,403,301,395,304,386,317,380,337,377,358,380,371,389,366,389,357,385,337,383,318,385,308,389,306,395,311,404"/>
+<area shape="rect" id="Node000015" href="$class_ring_buffer_core.html#ac43fe65e4e8c70ac5295a1e1db652d28" title="Удаляет первый (самый старый) элемент буфера." alt="" coords="462,331,602,356"/>
+<area shape="poly" id="edge27_Node000014_Node000015" title=" " alt="" coords="368,401,457,365,477,361,472,363,459,370,370,406"/>
+<area shape="poly" id="edge32_Node000016_Node000004" title=" " alt="" coords="362,548,386,533,408,514,423,494,431,476,439,457,457,439,474,432,479,429,460,443,444,460,435,478,427,497,412,517,389,537,365,552"/>
+<area shape="poly" id="edge33_Node000016_Node000016" title=" " alt="" coords="306,550,301,542,304,532,317,526,337,524,358,527,371,536,366,535,357,532,337,529,318,531,308,536,306,541,311,551"/>
+<area shape="poly" id="edge35_Node000017_Node000009" title=" " alt="" coords="175,423,213,394,262,365,279,360,274,363,264,370,216,399,178,427"/>
+<area shape="poly" id="edge36_Node000017_Node000017" title=" " alt="" coords="136,425,132,417,135,407,144,401,159,399,175,401,184,410,179,411,173,406,159,404,146,406,139,410,137,416,141,425"/>
+<area shape="rect" id="Node000018" href="$main_8cpp.html#a9df3e3b9d551e653c4fcc36c65a225e1" title="Вычисляет и выводит среднее значение элементов буфера." alt="" coords="269,477,404,503"/>
+<area shape="poly" id="edge37_Node000017_Node000018" title=" " alt="" coords="205,449,278,471,273,474,206,454"/>
+<area shape="poly" id="edge40_Node000018_Node000018" title=" " alt="" coords="306,476,301,469,304,459,317,453,337,451,358,453,371,462,366,462,357,458,337,456,318,458,308,463,306,468,311,477"/>
+<area shape="rect" id="Node000019" href="$_ring_buffer_8h.html#a312a806edfc967bcbe26df096e8fb707" title="Предварительное объявление функции вычисления среднего значения. Для того чтобы далее функция будет о..." alt="" coords="471,477,593,503"/>
+<area shape="poly" id="edge38_Node000018_Node000019" title=" " alt="" coords="404,488,458,489,453,491,405,493"/>
+<area shape="poly" id="edge39_Node000019_Node000019" title=" " alt="" coords="499,476,493,469,497,459,510,453,532,451,556,453,570,463,564,462,554,458,532,456,511,458,501,463,498,468,504,478"/>
+<area shape="poly" id="edge42_Node000020_Node000009" title=" " alt="" coords="205,302,278,325,273,327,206,307"/>
+<area shape="poly" id="edge46_Node000020_Node000020" title=" " alt="" coords="136,278,132,270,135,261,144,254,159,252,175,255,184,263,179,264,173,260,159,257,146,259,139,264,137,270,141,278"/>
+<area shape="rect" id="Node000021" href="$main_8cpp.html#a3416188649b6f9a797584dd028d853ad" title="Показывает вместимость и текущую заполненность одного буфера." alt="" coords="462,268,602,294"/>
+<area shape="poly" id="edge43_Node000020_Node000021" title=" " alt="" coords="211,287,449,281,445,285,212,293"/>
+<area shape="poly" id="edge45_Node000021_Node000007" title=" " alt="" coords="602,292,677,308,672,309,602,297"/>
+<area shape="poly" id="edge44_Node000021_Node000021" title=" " alt="" coords="499,267,493,259,497,250,510,243,532,241,556,244,570,253,564,253,554,249,532,247,511,249,501,253,498,259,504,268"/>
+<area shape="poly" id="edge48_Node000022_Node000009" title=" " alt="" coords="166,549,213,462,224,434,231,410,241,388,261,365,278,357,274,360,265,370,246,391,236,412,229,436,217,465,170,551"/>
+<area shape="poly" id="edge54_Node000022_Node000022" title=" " alt="" coords="136,550,132,542,135,533,144,526,159,524,175,527,184,535,179,536,173,532,159,529,146,531,139,536,137,542,141,551"/>
+<area shape="rect" id="Node000023" href="$main_8cpp.html#a420f41af3c2bcfd35a0035d678c8185c" title="Показывает первый и последний элементы переданного буфера." alt="" coords="263,624,410,650"/>
+<area shape="poly" id="edge49_Node000022_Node000023" title=" " alt="" coords="193,574,292,617,287,619,192,580"/>
+<area shape="poly" id="edge52_Node000023_Node000006" title=" " alt="" coords="379,621,458,597,702,535,707,534,459,602,380,626"/>
+<area shape="poly" id="edge53_Node000023_Node000023" title=" " alt="" coords="306,623,301,615,304,606,317,600,337,597,358,600,371,609,366,608,357,605,337,603,318,605,308,609,306,615,311,625"/>
+<area shape="rect" id="Node000024" href="$class_ring_buffer_core.html#a6102f1bf1bb97208dc420cb0523581e0" title="Возвращает ссылку на последний добавленный элемент." alt="" coords="458,612,606,638"/>
+<area shape="poly" id="edge50_Node000023_Node000024" title=" " alt="" coords="411,630,445,630,440,631,411,635"/>
+<area shape="rect" id="Node000025" href="$class_ring_buffer_core.html#a23645b4732a981dfc72b33cd8b27ec27" title="Возвращает ссылку на первый элемент буфера." alt="" coords="459,661,605,687"/>
+<area shape="poly" id="edge51_Node000023_Node000025" title=" " alt="" coords="408,648,449,658,444,658,407,653"/>
+<area shape="poly" id="edge56_Node000026_Node000026" title=" " alt="" coords="136,623,132,615,135,606,144,600,159,597,175,600,184,609,179,609,173,605,159,603,146,605,139,609,137,615,141,624"/>
+</map>

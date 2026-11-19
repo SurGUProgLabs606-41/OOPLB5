@@ -1,0 +1,11 @@
+<map id="RingBufferCore&lt; T, Capacity &gt;" name="RingBufferCore&lt; T, Capacity &gt;">
+<area shape="rect" id="Node000001" title="Реализует основное хранение и операции кольцевого буфера." alt="" coords="5,71,139,111"/>
+<area shape="rect" id="Node000002" href="$class_ring_buffer_3_01_t_00_01_capacity_00_01false_01_4.html" title="Специализация буфера для типов, которые нельзя копировать побайтно." alt="" coords="187,5,350,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,70,229,45,225,48,154,75"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="126,62,188,42,184,46,129,67"/>
+<area shape="rect" id="Node000003" href="$class_ring_buffer_3_01_t_00_01_capacity_00_01true_01_4.html" title="Специализация буфера для типов, которые можно копировать побайтно." alt="" coords="187,71,350,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,97,189,99,183,101,155,103"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="154,80,189,81,184,83,155,85"/>
+<area shape="rect" id="Node000004" href="$class_ring_buffer.html" title="Предварительное объявление шаблонного кольцевого буфера." alt="" coords="187,136,350,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,114,208,135,202,136,149,119"/>
+</map>

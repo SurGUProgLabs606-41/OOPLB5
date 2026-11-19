@@ -1,0 +1,25 @@
+<map id="addElement" name="addElement">
+<area shape="rect" id="Node000001" title="Выбирает один из десяти буферов и добавляет в него элемент." alt="" coords="5,165,96,191"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="26,165,22,157,25,147,35,141,51,139,68,141,78,150,73,151,66,146,50,144,36,146,29,150,27,156,31,165"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ab992e0913d5750e407186f3376c4c9b8" title="Считывает и добавляет значение в выбранный массив буферов." alt="" coords="144,128,235,154"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="95,164,131,156,126,158,97,169"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#afd3a0741a37ba9bec56ef56dcfd2793d" title="Запрашивает у пользователя номер буфера и проверяет его." alt="" coords="144,201,235,227"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="96,187,131,198,126,199,96,193"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="165,127,161,119,163,110,173,104,189,101,207,104,217,113,211,113,204,109,189,107,175,109,168,113,166,119,170,128"/>
+<area shape="rect" id="Node000003" href="$functions_8h.html#ae4e7e125336d52d7db53e957d3b722e0" title="Выводит все элементы кольцевого буфера в логическом порядке." alt="" coords="316,79,397,104"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="235,125,304,107,299,109,237,130"/>
+<area shape="rect" id="Node000007" href="$class_ring_buffer_core.html#a8be8c43eb406aab0a07c9f205240830f" title="Добавляет значение в конец буфера." alt="" coords="283,128,430,154"/>
+<area shape="poly" id="edge10_Node000002_Node000007" title=" " alt="" coords="235,138,270,140,265,141,236,143"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="328,78,323,70,326,60,338,54,357,52,377,55,389,64,384,63,375,60,357,57,339,59,330,64,328,69,333,79"/>
+<area shape="rect" id="Node000004" href="$class_ring_buffer_core.html#adbcd051a47070620ccfa714acbe36a66" title="Копирует элементы в обычном логическом порядке." alt="" coords="478,5,690,31"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="386,76,477,40,505,34,500,36,479,45,388,81"/>
+<area shape="rect" id="Node000005" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="545,79,623,104"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="397,89,532,91,527,92,398,94"/>
+<area shape="rect" id="Node000006" href="$class_ring_buffer_core.html#a500c14f371a854eb3a2a2791aa6e877c" title="Возвращает количество элементов, фактически находящихся в буфере." alt="" coords="512,128,656,154"/>
+<area shape="poly" id="edge9_Node000003_Node000006" title=" " alt="" coords="398,98,509,124,504,125,398,103"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="546,78,539,70,543,60,559,54,584,52,612,55,627,64,622,64,610,60,584,57,560,59,547,64,544,69,551,79"/>
+<area shape="poly" id="edge14_Node000008_Node000008" title=" " alt="" coords="165,200,161,193,163,183,173,177,189,175,207,177,217,187,211,186,204,182,189,180,175,182,168,186,166,192,170,202"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html#ab73a30d4fbb97df8c422e8d7bdf13a21" title="Подсчитывает общее количество загруженных буферов всех типов." alt="" coords="306,201,408,227"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="236,212,293,214,288,214,236,217"/>
+<area shape="poly" id="edge13_Node000009_Node000009" title=" " alt="" coords="328,200,323,193,326,183,338,177,357,175,377,177,389,187,384,186,375,182,357,180,339,182,330,187,328,192,333,202"/>
+</map>

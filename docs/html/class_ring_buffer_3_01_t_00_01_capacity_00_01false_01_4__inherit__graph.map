@@ -1,0 +1,6 @@
+<map id="RingBuffer&lt; T, Capacity, false &gt;" name="RingBuffer&lt; T, Capacity, false &gt;">
+<area shape="rect" id="Node000001" title="Специализация буфера для типов, которые нельзя копировать побайтно." alt="" coords="5,94,169,135"/>
+<area shape="rect" id="Node000002" href="$class_ring_buffer_core.html" title="Реализует основное хранение и операции кольцевого буфера." alt="" coords="20,5,154,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,60,82,94,77,93,76,64"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="98,60,97,95,92,93,94,64"/>
+</map>

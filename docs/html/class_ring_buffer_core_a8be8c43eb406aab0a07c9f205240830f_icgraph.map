@@ -1,0 +1,19 @@
+<map id="RingBufferCore::push" name="RingBufferCore::push">
+<area shape="rect" id="Node000001" title="Добавляет значение в конец буфера." alt="" coords="380,67,528,92"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ab992e0913d5750e407186f3376c4c9b8" title="Считывает и добавляет значение в выбранный массив буферов." alt="" coords="241,29,332,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,63,333,55,333,50,381,63"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ab1c8665ec01900f2448e3465603c888c" title="Считывает значения одной строки файла и создает один буфер." alt="" coords="246,103,327,128"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="379,96,328,110,327,104,374,96"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="309,14,302,10,287,8,272,10,265,14,263,20,267,30,262,28,258,21,261,11,271,5,287,3,304,5,314,14"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a82ceff5e08f30d6e1584a341d8688253" title="Выбирает один из десяти буферов и добавляет в него элемент." alt="" coords="103,29,193,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,43,194,45,193,40,228,42"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="166,14,160,10,148,8,136,10,130,14,128,20,132,29,127,28,123,21,125,11,134,5,148,3,163,5,171,14"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,67,55,92"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="89,62,56,74,54,69,92,58"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="48,52,43,48,30,45,18,47,12,52,11,58,14,66,9,67,5,58,8,49,16,42,30,40,45,43,53,51"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="309,87,302,84,287,81,272,83,265,88,263,94,267,103,263,101,258,94,261,85,271,78,287,76,304,79,314,88"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#aa87beb8176d24c12c6fbc494dad6221a" title="Загружает из data.txt все десять объектов кольцевого буфера." alt="" coords="111,103,184,128"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="228,116,185,118,185,113,234,115"/>
+<area shape="poly" id="edge11_Node000006_Node000004" title=" " alt="" coords="94,101,55,90,55,84,98,98"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="166,87,160,84,148,81,136,83,130,88,128,94,132,103,127,101,123,94,125,85,134,78,148,76,163,79,171,88"/>
+</map>

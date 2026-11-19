@@ -1,0 +1,6 @@
+<map id="printValue&lt; double &gt;" name="printValue&lt; double &gt;">
+<area shape="rect" id="Node000001" title="Выводит значение типа double с двумя знаками после запятой." alt="" coords="5,29,146,55"/>
+<area shape="rect" id="Node000002" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="194,29,272,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,40,181,42,176,42,146,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="206,28,201,21,204,11,215,5,233,3,252,5,263,15,258,14,250,10,233,8,217,10,208,15,206,20,211,30"/>
+</map>

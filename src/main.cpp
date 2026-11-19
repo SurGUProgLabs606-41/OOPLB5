@@ -1,3 +1,4 @@
+// Загрузка данных, меню и взаимодействие с пользователем
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -63,11 +64,11 @@ size_t getTotalCount()
  * лимит объектов или данные не удалось корректно прочитать.
  */
 template <typename T, size_t Capacity>
-void loadBuffer(
+void loadBuffer( // Параметры функции.
     istringstream &line,
     size_t count,
     RingBuffer<T, Capacity> buffers[],
-    size_t &bufferCount)
+    size_t &bufferCount) // Ссылка на переменную, копия не может так.
 {
     if (count > Capacity)
     {
@@ -79,7 +80,7 @@ void loadBuffer(
         throw runtime_error("Превышено допустимое количество буферов");
     }
 
-    RingBuffer<T, Capacity> buffer;
+    RingBuffer<T, Capacity> buffer; // Промежуточный объект буфера, который будет заполнен и затем скопирован в массив.
 
     for (size_t i = 0; i < count; i++)
     {
@@ -119,11 +120,11 @@ bool loadData()
         return false;
     }
 
-    string line;
+    string line; // Переменная для хранения каждой строки файла при чтении.
 
     try
     {
-        while (getline(file, line))
+        while (getline(file, line)) // Чтение файла построчно, пока не достигнут конец.
         {
             if (line.empty())
             {
@@ -135,11 +136,11 @@ bool loadData()
                 throw runtime_error("В файле слишком много буферов");
             }
 
-            istringstream stream(line);
+            istringstream stream(line); // Чтение данных в виде потока, чтобы можно было использовать оператор >> для извлечения значений.
 
-            string type;
-            size_t capacity;
-            size_t count;
+            string type; // int
+            size_t capacity; // 5
+            size_t count; // 4
 
             if (!(stream >> type >> capacity >> count))
             {
@@ -177,7 +178,7 @@ bool loadData()
                     "Неподдерживаемый тип данных или размер буфера");
             }
 
-            string extra;
+            string extra; // Проверка лишних данных
 
             if (stream >> extra)
             {
@@ -185,13 +186,13 @@ bool loadData()
             }
         }
     }
-    catch (const exception &error)
+    catch (const exception &error) // Перехват ошибок
     {
         cout << "Ошибка загрузки: " << error.what() << endl;
         return false;
     }
 
-    if (getTotalCount() != 10)
+    if (getTotalCount() != 10) // Проверка, что загружено ровно 10 буферов
     {
         cout << "Ошибка: ожидалось 10 буферов, загружено "
              << getTotalCount() << endl;
@@ -212,40 +213,40 @@ void showAllBuffers()
 {
     cout << "\n===== ВСЕ БУФЕРЫ =====\n";
 
-    size_t number = 1;
+    size_t number = 1; // Общий номер буфера, который увеличивается при выводе каждого объекта.
 
-    for (size_t i = 0; i < intCount5; i++)
+    for (size_t i = 0; i < intCount5; i++) // Все int вместимостью 5
     {
         cout << "\nБуфер " << number++ << ": ";
         printBuffer(intBuffers5[i]);
         cout << endl;
     }
 
-    for (size_t i = 0; i < doubleCount5; i++)
+    for (size_t i = 0; i < doubleCount5; i++) // Все double вместимостью 5
     {
         cout << "\nБуфер " << number++ << ": ";
         printBuffer(doubleBuffers5[i]);
         cout << endl;
     }
 
-    for (size_t i = 0; i < floatCount7; i++)
+    for (size_t i = 0; i < floatCount7; i++) // Все float вместимостью 7
     {
         cout << "\nБуфер " << number++ << ": ";
         printBuffer(floatBuffers7[i]);
         cout << endl;
     }
 
-    for (size_t i = 0; i < intCount10; i++)
+    for (size_t i = 0; i < intCount10; i++) // Все int вместимостью 10
     {
         cout << "\nБуфер " << number++ << ": ";
         printBuffer(intBuffers10[i]);
         cout << endl;
     }
 
-    for (size_t i = 0; i < doubleCount10; i++)
+    for (size_t i = 0; i < doubleCount10; i++) // Все double вместимостью 10
     {
         cout << "\nБуфер " << number++ << ": ";
-        printBuffer(doubleBuffers10[i]);
+        printBuffer(doubleBuffers10[i]); // Объект функции из functions.h
         cout << endl;
     }
 }
@@ -257,24 +258,24 @@ void showAllBuffers()
  * @note При ошибке формата ввода состояние cin очищается, остаток строки
  * удаляется, чтобы последующие запросы ввода могли работать корректно.
  */
-bool selectBuffer(size_t &index)
+bool selectBuffer(size_t &index) // Передача по ссылке, чтобы функция могла изменить значение переменной в вызывающем коде.
 {
-    size_t total = getTotalCount();
+    size_t total = getTotalCount(); // Все буферы
 
     cout << "Введите номер буфера (1-" << total << "): ";
 
-    if (!(cin >> index))
+    if (!(cin >> index)) // Проверка, что введено целое число
     {
         cin.clear();
         cin.ignore(
-            numeric_limits<streamsize>::max(),
+            numeric_limits<streamsize>::max(), // Игнорирование всех символов до конца строки.
             '\n');
 
         cout << "Некорректный ввод!\n";
         return false;
     }
 
-    if (index < 1 || index > total)
+    if (index < 1 || index > total) // Проверка на допустимый диапазон
     {
         cout << "Неверный номер буфера!\n";
         return false;
@@ -299,7 +300,7 @@ void addToBuffer(
     RingBuffer<T, Capacity> buffers[],
     size_t index)
 {
-    T value;
+    T value; // Переменная нужного типа.
 
     if (!(cin >> value))
     {
@@ -312,12 +313,12 @@ void addToBuffer(
         return;
     }
 
-    buffers[index].push(value);
+    buffers[index].push(value); // Добавление нового значения в выбранный буфер. Если буфер заполнен, метод push заменяет самый старый элемент новым.
 
     cout << "Элемент успешно добавлен!\n";
 
     cout << "Содержимое буфера: ";
-    printBuffer(buffers[index]);
+    printBuffer(buffers[index]); // Вывод содержимого буфера после добавления нового элемента.
     cout << endl;
 }
 
@@ -327,6 +328,9 @@ void addToBuffer(
  * Пользователь вводит общий номер буфера. По счетчикам групп общий номер
  * преобразуется в индекс конкретного массива, после чего вызывается
  * шаблонная функция addToBuffer соответствующего типа.
+ * Вместисоть буфера определяется типом выбранного массива.
+ * 
+ * Поиск нужнего элемента по индексам
  */
 void addElement()
 {
@@ -393,7 +397,7 @@ void removeFromBuffer(
         printBuffer(buffers[index]);
         cout << endl;
     }
-    catch (const exception &error)
+    catch (const exception &error) // Если буффер пустой, выбрасывается исклюение.
     {
         cout << "Ошибка: " << error.what() << endl;
     }
@@ -466,7 +470,7 @@ void showBufferFrontBack(
 
         cout << endl;
     }
-    catch (const exception &error)
+    catch (const exception &error) // Исключение если буфер пуст.
     {
         cout << "Ошибка: " << error.what() << endl;
     }
@@ -477,6 +481,8 @@ void showBufferFrontBack(
  *
  * После проверки номера определяет соответствующий массив и передает
  * выбранный объект функции showBufferFrontBack.
+ * Работает уже с выбранным объектом, поэтому передача по ссылке.
+ * Определяет нужный массив и индекс в нем, чтобы вызвать шаблонную функцию.
  */
 void showFrontBack()
 {

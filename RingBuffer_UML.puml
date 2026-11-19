@@ -1,0 +1,120 @@
+@startuml RingBuffer_UML
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+' Базовый класс кольцевого буфера
+together {
+    class "RingBufferCore<T, Capacity>" as RingBufferCore {
+        - data : T[Capacity]
+        # head : size_t
+        # count : size_t
+        {static} - maxCapacity : size_t
+        --
+        + RingBufferCore()
+        + RingBufferCore(other : RingBufferCore)
+        + push(value : const T&) : void
+        + pop() : void
+        + front() : T&
+        + front() : const T&
+        + back() : T&
+        + back() : const T&
+        + size() : size_t
+        + empty() : bool
+        + getMaxCapacity() : size_t
+        + getOrderedData() : array<T, Capacity>
+    }
+
+    class "RingBuffer<T, Capacity, UseMemcpy>" as RingBuffer {
+        + RingBuffer()
+        + getOrderedData() : array<T, Capacity>
+    }
+
+    class "RingBuffer<T, Capacity, true>" as RingBufferMemcpy {
+        + getOrderedData() : array<T, Capacity>
+    }
+
+    class "RingBuffer<T, Capacity, false>" as RingBufferGeneric {
+        + getOrderedData() : array<T, Capacity>
+    }
+}
+
+RingBuffer --|> RingBufferCore : наследование
+RingBufferMemcpy --|> RingBufferCore : специализация
+RingBufferGeneric --|> RingBufferCore : специализация
+
+class "calculateAverage<T, Capacity>()" as calculateAverage <<friend function>> {
+    + calculateAverage(buffer : RingBufferCore<T, Capacity>) : double
+}
+RingBufferCore ..> calculateAverage : friend
+
+note right of RingBufferCore
+  Capacity — размер буфера.
+  head — индекс первого элемента.
+  count — количество элементов.
+  При заполнении push() заменяет
+  самый старый элемент.
+end note
+
+note right of RingBufferMemcpy
+  Вариант для типов,
+  допускающих побитовое копирование.
+  Использует memcpy().
+end note
+
+note right of RingBufferGeneric
+  Вариант для остальных типов.
+  Копирует элементы по одному.
+end note
+
+package "Массивы буферов в main.cpp" {
+    class "intBuffers5[10]" as Int5
+    class "doubleBuffers5[10]" as Double5
+    class "floatBuffers7[10]" as Float7
+    class "intBuffers10[10]" as Int10
+    class "doubleBuffers10[10]" as Double10
+}
+
+Int5 ..> RingBuffer : RingBuffer<int, 5>
+Double5 ..> RingBuffer : RingBuffer<double, 5>
+Float7 ..> RingBuffer : RingBuffer<float, 7>
+Int10 ..> RingBuffer : RingBuffer<int, 10>
+Double10 ..> RingBuffer : RingBuffer<double, 10>
+
+package "Функции main.cpp" {
+    class "loadData()" as loadData <<function>>
+    class "loadBuffer<T, Capacity>()" as loadBuffer <<template function>>
+    class "showAllBuffers()" as showAllBuffers <<function>>
+    class "selectBuffer()" as selectBuffer <<function>>
+    class "addElement()" as addElement <<function>>
+    class "removeElement()" as removeElement <<function>>
+    class "showFrontBack()" as showFrontBack <<function>>
+    class "showAverage()" as showAverage <<function>>
+    class "showCapacity()" as showCapacity <<function>>
+}
+
+loadData ..> loadBuffer : вызывает
+loadBuffer ..> RingBuffer : заполняет
+showAllBuffers ..> Int5
+showAllBuffers ..> Double5
+showAllBuffers ..> Float7
+showAllBuffers ..> Int10
+showAllBuffers ..> Double10
+selectBuffer ..> Int5
+selectBuffer ..> Double5
+selectBuffer ..> Float7
+selectBuffer ..> Int10
+selectBuffer ..> Double10
+addElement ..> selectBuffer
+removeElement ..> selectBuffer
+showFrontBack ..> selectBuffer
+showAverage ..> selectBuffer
+showCapacity ..> selectBuffer
+addElement ..> RingBuffer : push()
+removeElement ..> RingBuffer : pop()
+showFrontBack ..> RingBuffer : front(), back()
+showAverage ..> calculateAverage
+showCapacity ..> RingBuffer : getMaxCapacity()
+
+@enduml

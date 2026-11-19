@@ -1,0 +1,13 @@
+<map id="calculateAverage" name="calculateAverage">
+<area shape="rect" id="Node000001" title="Предварительное объявление функции вычисления среднего значения. Для того чтобы далее функция будет о..." alt="" coords="434,29,556,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="524,14,515,10,495,8,477,10,467,15,465,20,470,30,465,28,459,21,463,11,475,5,495,3,516,5,529,15"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a9df3e3b9d551e653c4fcc36c65a225e1" title="Вычисляет и выводит среднее значение элементов буфера." alt="" coords="251,29,386,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="416,42,386,45,386,40,422,42"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="345,14,337,10,319,8,301,10,292,15,290,20,295,30,290,28,285,21,288,11,300,5,319,3,339,5,351,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a04ec64d6994efa4b1328c898ed719a85" title="Запрашивает номер буфера и выводит среднее арифметическое его элементов." alt="" coords="103,29,203,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="233,42,204,45,204,40,238,42"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="172,14,166,10,153,8,140,10,134,14,133,20,136,30,131,28,127,21,130,11,138,5,153,3,168,5,177,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,29,55,55"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="85,43,55,45,55,40,90,41"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="49,15,43,10,30,8,18,10,11,14,10,20,13,28,8,30,4,21,7,11,16,5,30,3,45,5,54,14"/>
+</map>

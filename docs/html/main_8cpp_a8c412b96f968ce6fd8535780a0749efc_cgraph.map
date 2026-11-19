@@ -1,0 +1,20 @@
+<map id="showFrontBack" name="showFrontBack">
+<area shape="rect" id="Node000001" title="Выбирает буфер по общему номеру и выводит его крайние элементы." alt="" coords="5,80,118,106"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="31,80,26,71,29,62,41,56,62,53,83,56,96,64,91,66,81,61,61,59,43,61,33,65,31,71,36,79"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#afd3a0741a37ba9bec56ef56dcfd2793d" title="Запрашивает у пользователя номер буфера и проверяет его." alt="" coords="194,36,285,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,77,180,62,176,66,117,82"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a420f41af3c2bcfd35a0035d678c8185c" title="Показывает первый и последний элементы переданного буфера." alt="" coords="166,116,313,142"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="118,102,160,111,155,113,119,107"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="209,35,203,27,207,18,219,12,239,9,261,12,274,21,268,21,259,17,239,15,221,17,211,21,209,27,214,36"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ab73a30d4fbb97df8c422e8d7bdf13a21" title="Подсчитывает общее количество загруженных буферов всех типов." alt="" coords="384,29,486,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,45,371,43,366,45,286,50"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="401,28,396,21,399,11,413,5,435,3,459,5,472,15,467,15,457,10,435,8,414,10,403,15,401,20,407,30"/>
+<area shape="poly" id="edge10_Node000004_Node000004" title=" " alt="" coords="209,115,203,107,207,98,219,92,239,89,261,92,274,101,268,101,259,97,239,95,221,97,211,101,209,107,214,116"/>
+<area shape="rect" id="Node000005" href="$class_ring_buffer_core.html#a6102f1bf1bb97208dc420cb0523581e0" title="Возвращает ссылку на последний добавленный элемент." alt="" coords="361,79,508,104"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="310,113,351,107,346,109,311,118"/>
+<area shape="rect" id="Node000006" href="$class_ring_buffer_core.html#a23645b4732a981dfc72b33cd8b27ec27" title="Возвращает ссылку на первый элемент буфера." alt="" coords="362,128,507,154"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="313,131,349,135,344,136,314,136"/>
+<area shape="rect" id="Node000007" href="$functions_8h.html#ac7de18bfec2e42a79b1e3fd398fbc380" title="Выводит одно значение в стандартный поток вывода." alt="" coords="396,201,474,227"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="271,140,392,194,387,195,270,145"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="402,200,396,193,399,183,413,177,435,175,459,177,472,187,467,186,457,182,435,180,414,182,403,187,401,192,407,202"/>
+</map>
